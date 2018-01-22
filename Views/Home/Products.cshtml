@@ -1,0 +1,56 @@
+@{
+    ViewData["Title"] = "Products | ";
+}
+@model myYardSale.Models.Product
+<img class="grass" src="images/Grass-wider.png">
+@Html.Partial("./Partials/Header")
+
+<h2>Products</h2>
+
+<div id="left">
+<h4><span>Add a New Product</span></h4>
+
+<form asp-action="newProduct" asp-controller="Home" method="post">
+    <div class="form-group">
+        <label asp-for="product_name"></label><br>
+        <span asp-validation-for="product_name"></span>
+        <input asp-for="product_name"/>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="description"></label><br>
+        <span asp-validation-for="description"></span>
+        <textarea asp-for="description" rows="4" cols="20"></textarea>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="image"></label><br>
+        <span asp-validation-for="image"></span>
+        <input asp-for="image"/>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="product_quantity"></label><br>
+        <span asp-validation-for="product_quantity"></span>
+        <input asp-for="product_quantity" type="number"/>
+    </div>
+    <input type="submit" value="Create">
+</form>
+
+</div> <!-- end left div --> 
+
+<div id="right">
+    @{
+        foreach(var product in @ViewBag.AllProducts)
+        {
+            <a href="show/@product.productId">
+            <div class="productBox">
+                <img class="productImage" src="@product.image" alt="Picture of @product.product_name">
+                <p>@product.product_name</p>
+                <p>(@product.product_quantity left)</p>
+            </div>
+            </a>
+        }
+    }
+</div> <!-- end right div --> 
+<br>

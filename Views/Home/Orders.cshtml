@@ -1,0 +1,69 @@
+@{
+    ViewData["Title"] = "Orders | Store";
+}
+@model myYardSale.Models.Order
+<img class="grass" src="images/Grass-wider.png">
+@Html.Partial("./Partials/Header")
+            
+<div id="main">
+
+    <h2>Add a new Order</h2>
+
+    <form asp-action="newOrder" asp-controller="Home" method="post">
+        <div class="form-group">
+            <label style="margin-right: 20px;">Customer</label>
+            <select style="width: 300px" asp-for="customerId">
+                @{
+                    foreach(var customer in @ViewBag.Customers)
+                    {
+                        <option value="@customer.customerId">@customer.name</option>
+                    }
+                }
+            </select>
+            <span asp-validation-for="customerId"></span>
+        </div>
+        <div class="form-group"></div>
+            <label style="margin-right: 45px;">Order</label>
+            <select asp-for="order_quantity">
+                @for(int val = 1; val < 11; val++)
+                    {
+                        <option value="@val">@val</option>
+                    }
+            </select>
+        
+            <select asp-for="productId">
+                @{
+                    foreach(var product in ViewBag.Products)
+                    {
+                        <option value="@product.productId">@product.product_name</option>
+                    }
+                }
+            </select>
+        </div>
+        <input style="margin-left: 280px;" type="submit" value="Order">
+    </form>
+    
+
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Customer Name</th>
+                <th>Product</th>
+                <th>Quantity</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var order in @ViewBag.Orders)
+            {
+                <tr>
+                    <td>@order.Customer.name</td>
+                    <td><a href="show/@order.Product.productId">@order.Product.product_name</a></td>
+                    <td>@order.order_quantity</td>
+                    <td>@order.created_at.ToString("MMMM dd, yyyy")</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+</div>

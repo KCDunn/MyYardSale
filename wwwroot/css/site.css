@@ -1,0 +1,94 @@
+/*Write all of your CSS here*/
+html body{
+    /* text-align: center; */
+    font-family: 'Cantata One', serif;
+    /* font-family: 'Cantata One', serif; */
+    /* font-family: 'Kreon', serif; */
+    /* font-family: 'Vidaloka', serif; */
+    font-size: 1.3em !important;
+    background: linear-gradient(to right, rgb(213, 230, 252), white, white, rgb(236, 244, 250));
+}
+
+.grass{
+    width: 100%;
+    height: 50px;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0;
+}
+.container-fluid{
+    background: linear-gradient(rgb(211, 191, 182), rgb(248, 233, 227), rgb(249, 254, 255)) !important;
+    
+}
+h1, h2, h3, h4{
+    color: rgb(11, 94, 11) !important;
+    font-family: 'Gochi Hand', cursive !important;
+}
+h1{
+    margin-top: 1px;
+    margin-bottom: 1px;
+}
+span{
+    color: rgb(207, 22, 22);
+}
+
+#main{
+    margin: auto;
+    width: 98%;
+}
+html div{
+    /* background: white !important; */
+}
+.grass {
+    /* background: rgb(236, 244, 255) !important; */
+    /* background: radial-gradient(circle, rgb(236, 244, 255), rgb(236, 244, 255), white) !important; */
+}
+
+/* left div for adding products */
+#left{  
+    width: 210px;
+    display: inline-block;
+    vertical-align: top;
+    text-align: left;
+    padding: 5px;
+    border-radius: 10px;
+    margin: 5px;
+}
+/* right div display products */
+#right{
+    width: 700px;
+    display: inline-block;
+    vertical-align: top;
+    border-radius: 10px;
+    margin-left: 5px;
+
+}
+
+.productBox{
+    width: 200px;
+    padding: 5px;
+    margin: 10px;
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    border: 1px solid rgb(221, 220, 220);
+}
+
+.productImage{
+    width: 150px;
+}
+
+table {
+    margin-top: 30px;
+}
+th{
+    color: rgb(11, 94, 11);
+}
+
+#showImg{
+    width: 400px;
+}
+
+span{
+    font-size: 1.3em;
+}

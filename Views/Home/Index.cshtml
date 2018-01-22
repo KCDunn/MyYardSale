@@ -1,0 +1,40 @@
+@{
+    ViewData["Title"] = "Dashboard of my SPA";
+}
+<img class="grass" src="images/Grass-wider.png">
+
+@Html.Partial("./Partials/Header")
+<div>
+    <h3 sty>latest products</h3>
+    @foreach(var product in @ViewBag.LatestProducts)
+    {
+        <a href="show/@product.productId">
+        <div class="productBox">
+            <img class="productImage" src="@product.image" alt="Picture of @product.product_name">
+            <p>@product.product_name</p>
+            <p>(@product.product_quantity left)</p>
+        </div></a>
+    }
+    <br>
+    <a href="/products">show more...</a>
+</div>
+
+<div>
+    <h3>Recent Orders</h3>
+    @foreach(var order in ViewBag.LatestOrders)
+    {
+        <p>@order.Customer.name ordered @order.order_quantity @order.Product.product_name's... @((@DateTime.Now - @order.created_at).ToString("%d")) days ago.</p>
+    }
+    <a href="/orders">show more...</a>
+</div>
+
+<div>
+    <h3>New Customers</h3>
+    <ul>
+        @foreach(var customer in @ViewBag.LatestCustomers)
+        {
+            <li>@customer.name joind the store on @customer.created_at.ToString("D")</li>
+        }
+    </ul>
+    <a href="/customers">show more...</a>
+</div>

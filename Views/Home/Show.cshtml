@@ -1,0 +1,15 @@
+@{
+    ViewData["Title"] = "item | Store";
+}
+@model myYardSale.Models.Product
+<img class="grass" src="../images/Grass-wider.png">
+@Html.Partial("./Partials/Header")
+
+<div id="main">
+    <h1>@ViewBag.thisProduct.product_name</h1>
+    <img id="showImg" src="@ViewBag.thisProduct.image" alt="@ViewBag.thisProduct.product_name">
+    <h5>@ViewBag.thisProduct.description</h5>
+    <p><span>@ViewBag.thisProduct.product_quantity</span> left in stock.</p>
+    <br>
+    <a href="/products">more products...</a>
+</div>
