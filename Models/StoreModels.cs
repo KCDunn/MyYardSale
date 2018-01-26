@@ -2,7 +2,7 @@ using System;
 using System.ComponentModel.DataAnnotations;
 using System.Collections.Generic;
 
-namespace myYardSale.Models
+namespace eCommerce.Models
 {
     public class Customer
     {

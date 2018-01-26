@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 
-namespace myYardSale.Models
+namespace eCommerce.Models
 {
     public class StoreContext : DbContext
     {

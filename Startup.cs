@@ -7,9 +7,9 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Extensions;
 using Microsoft.Extensions.Configuration;
 using Microsoft.AspNetCore.Hosting;
-using myYardSale.Models;
+using eCommerce.Models;
 
-namespace myYardSale
+namespace eCommerce
 {
     public class Startup
     {

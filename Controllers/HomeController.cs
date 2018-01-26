@@ -6,9 +6,9 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
 using System.Linq;
-using myYardSale.Models;
+using eCommerce.Models;
 
-namespace myYardSale.Controllers
+namespace eCommerce.Controllers
 {
     public class HomeController : Controller
     {

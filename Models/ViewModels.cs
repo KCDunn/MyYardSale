@@ -1,4 +1,4 @@
-namespace myYardSale.Models
+namespace eCommerce.Models
 {
     public class StoreCombo
     {
