@@ -12790,11 +12790,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/kevin/Documents/CodingDojo/C#/week7/eCommerce/eCommerce.csproj",
+      "projectUniqueName": "/home/kevin/Documents/PortfolioBasic/asp_combo/MyYardSale/eCommerce.csproj",
       "projectName": "eCommerce",
-      "projectPath": "/home/kevin/Documents/CodingDojo/C#/week7/eCommerce/eCommerce.csproj",
+      "projectPath": "/home/kevin/Documents/PortfolioBasic/asp_combo/MyYardSale/eCommerce.csproj",
       "packagesPath": "/home/kevin/.nuget/packages/",
-      "outputPath": "/home/kevin/Documents/CodingDojo/C#/week7/eCommerce/obj/",
+      "outputPath": "/home/kevin/Documents/PortfolioBasic/asp_combo/MyYardSale/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/share/dotnet/sdk/NuGetFallbackFolder"
